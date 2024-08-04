@@ -1,7 +1,4 @@
 @media (width <= 1300px) {
-  .nav {
-    padding-inline: 2rem;
-  }
   .container__title {
     padding-left: 2rem;
   }
@@ -14,6 +11,9 @@
 }
 
 @media (width <= 1025px) {
+  .container__title {
+    padding-left: 0rem;
+  }
   .header__title {
     grid-template-columns: 1fr;
     row-gap: 0rem;
@@ -77,7 +77,7 @@
     width: 50rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    gap: 0;
+    gap: 2rem;
     margin-inline: auto;
   }
   .features__img--2 {

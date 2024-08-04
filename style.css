@@ -21,7 +21,7 @@
 }
 
 html {
-  font-size: 62.5%;  /* 62.5% = 10px -> 16px*/
+  font-size: 10px;  /* 62.5% = 10px -> 16px*/
   box-sizing: border-box;
 }
 
@@ -137,6 +137,7 @@ img {
   height: 9rem;
   width: 100%;
   z-index: 100;
+  padding-inline: 2rem;
 }
 
 .nav__toggle, .nav__close, .nav__link--mobile {
@@ -555,11 +556,8 @@ h4 {
   padding: 10rem 3rem;
 }
 
-.section--sign-up .section__header {
-  color: #fff;
-}
-
 .section--sign-up .section__title {
+  color: #fff;
   margin-bottom: 6rem;
 }
 
@@ -603,8 +601,8 @@ h4 {
   text-align: center;
 }
 
-.footer__copyright .footer__link {
-  font-size: 1.4rem;
+.footer__copyright, .footer__copyright .footer__link {
+  font-size: 1rem;
 }
 
 /* MODAL WINDOW */
