@@ -69,6 +69,9 @@
 }
 
 @media (width <= 850px) {
+  .section, .footer {
+    padding-block: 8rem;
+  }
   .section__title {
     max-width: auto;
     text-align: center;
