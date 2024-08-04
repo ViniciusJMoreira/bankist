@@ -1,0 +1,148 @@
+@media (width <= 1300px) {
+  .nav {
+    padding-inline: 2rem;
+  }
+  .container__title {
+    padding-left: 2rem;
+  }
+}
+
+@media (width <= 1200px) {
+  .features {
+    column-gap: 2rem;
+  }
+}
+
+@media (width <= 1025px) {
+  .header__title {
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+    justify-items: center;
+    align-items: center;
+  }
+  .header__img {
+    display: none;
+  }
+  .features__feature {
+    width: 95%;
+  }
+  .features__icon {
+    margin-bottom: 1rem;
+  }
+  .features__header {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (width <= 992px) {
+  .nav__menu {
+    column-gap: 2rem;
+  }
+  .nav__list {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 8rem;
+    padding-right: 2.50rem;
+    row-gap: 2rem;
+    background-color: #f3f3f3;
+  }
+  .nav__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 4rem;
+    font-size: 2.125rem;
+    color: #5ec576;
+  }
+  .nav__item:not(:last-child) {
+    display: none;
+  }
+  .nav__toggle, .nav__link--mobile {
+    display: block;
+  }
+}
+
+@media (width <= 850px) {
+  .section__title {
+    max-width: auto;
+    text-align: center;
+  }
+  .features {
+    width: 50rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0;
+    margin-inline: auto;
+  }
+  .features__img--2 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .operations__tab-container {
+    display: none;
+  }
+  .operations__content {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    column-gap: 3rem;
+    row-gap: 0.5rem;
+    padding: 8rem 2rem;
+  }
+  .footer__nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (width <= 768px) {
+  .nav__logo {
+    height: 3.7rem;
+  }
+  .nav__item:last-child {
+    display: none;
+  }
+  .nav__link--mobile {
+    display: none;
+  }
+}
+
+@media (width <= 630px) {
+
+}
+
+@media (width <= 540px) {
+  .nav__logo {
+    height: 3.2rem;
+  }
+  .btn--text {
+    font-size: 1.4rem;
+  }
+  .features {
+    width: auto;
+  }
+  .section--sign-up .btn {
+    font-size: 1.3rem;
+    padding: 2rem 4rem;
+  }
+}
+
+@media (width <= 480px) {
+  .btn--text {
+    font-size: 1.2rem;
+  }
+}
+
+/* HEIGHT */
+@media (width > 1025px) and (height < 580px) {
+  .header__title {
+    align-items: center;
+  }
+  .header__img {
+    transform: translateY(0);
+  }
+}
