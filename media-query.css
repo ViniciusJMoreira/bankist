@@ -16,13 +16,14 @@
   }
   .header__title {
     grid-template-columns: 1fr;
-    row-gap: 0rem;
-    justify-items: start;
-    align-items: start;
-    margin-bottom: 5%;
+    grid-template-rows: 1fr , 1fr;
   }
   .header__img {
-    display: none;
+    width: clamp(22rem, 50vw, 30rem);
+    justify-self: end;
+    grid-area: 2 / 1 / 3 / 2;
+    transform: translateY(0);
+    /* display: none; */
   }
   .features__feature {
     width: 95%;
@@ -229,5 +230,10 @@
   }
   .header__img {
     transform: translateY(0);
+  }
+}
+@media (width < 1025px) and (height < 580px) {
+  .header__img {
+    display: none;
   }
 }

@@ -3,9 +3,10 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
-// const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const navMenu = document.querySelector(".nav__list");
+// const header = document.querySelector(".header");
+const headerTitle = document.querySelector(".header__title");
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const allSections = document.querySelectorAll(".section");
 const section1 = document.querySelector('#section--1');
@@ -97,6 +98,7 @@ btnScrollTo.addEventListener('click', function (e) {
 
   // section1.scrollIntoView({behavior: 'smooth'});
 });
+
 
 ///////////////////////////////////////
 // Reveal sections

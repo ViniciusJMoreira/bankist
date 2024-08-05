@@ -250,10 +250,11 @@ h4 {
   width: 100%;
   z-index: -1;
   opacity: 0.7;
-  transform: scale(1.07, 1.05) skewX(-15deg);
+  transform: translateX(-1000%);
   background-image: var(--gradient-primary);
+  animation: highlightEntry 2s forwards;
 }
-
+/* cubic-bezier(0.785, 0.135, 0.15, 0.86) */
 /* FEATURES */
 .features {
   display: grid;
@@ -679,3 +680,15 @@ h4 {
   font-weight: 400;
   padding-block: .75rem;
 }
+/* Animation highlights , header title */
+ @keyframes highlightEntry {
+  30% {
+    transform: translateX(0%) scale(1.07, 1.05) skewX(-5deg);
+  }
+  55% {
+    transform: translateX(-50%) scale(1.07, 1.05) skewX(-10deg);
+  }
+  100% {
+    transform: translateX(0%) scale(1.07, 1.05) skewX(-15deg);
+  }
+ }
