@@ -5,6 +5,9 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const nav = document.querySelector(".nav");
 const navMenu = document.querySelector(".nav__list");
+const navItem = document.querySelectorAll(".nav__list .nav__item");
+const navToggle = document.querySelector(".nav__toggle");
+const navClose = document.querySelector(".nav__close");
 // const header = document.querySelector(".header");
 const headerTitle = document.querySelector(".header__title");
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -45,6 +48,16 @@ document.addEventListener('keydown', function (e) {
 });
 
 ///////////////////////////////////////
+// Nav menu mobile
+const openMenu = function() {
+  navMenu.style.display = "flex";
+}
+const closeMenu = function() {
+  navMenu.style.display = 'none';
+}
+navToggle.addEventListener("click", openMenu);
+navClose.addEventListener("click", closeMenu);
+///////////////////////////////////////
 // styck navigation
 const navObserver = function(entries) {
   const [entry] = entries;
@@ -53,8 +66,8 @@ const navObserver = function(entries) {
   else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) nav.classList.remove('sticky');
 }
 const navHeight = nav.getBoundingClientRect().height;
-const observer = new IntersectionObserver(navObserver, {root:null, threshold: 0.08,});
-// rootMargin: `-${navHeight}px`;
+const observer = new IntersectionObserver(navObserver, {root:null, threshold: 0.08,rootMargin: `-${navHeight}px`});
+
 observer.observe(section1);
 
 ///////////////////////////////////////
