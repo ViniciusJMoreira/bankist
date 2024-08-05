@@ -141,8 +141,19 @@
     height: 40rem;
   }
   .slider__btn {
-    display: none;
+    top: 95%;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.65rem;
   }
+  .slider__btn--left {
+    left: 30%;
+  }
+
+  .slider__btn--right {
+    right: 30%;
+  }
+
   .testimonial {
     width: 75%;
   }
@@ -158,8 +169,11 @@
   .testimonial__text {
     font-size: 1.3rem;
     line-height: 1.7;
+    margin-bottom: 2.5rem;
   }
   .testimonial__author {
+    grid-template-columns: 5.8rem 1fr;
+    margin-left: 2.2rem;
     column-gap: 0;
   }
   .testimonial__photo {
@@ -172,7 +186,7 @@
     font-size: 1rem;
   }
   .dots {
-    bottom: 10%;
+    /* bottom: 10%; */
   }
 }
 
@@ -195,6 +209,12 @@
 @media (width <= 480px) {
   .btn--text {
     font-size: 1.2rem;
+  }
+  .slider__btn--left {
+    left: 25%;
+  }
+  .slider__btn--right {
+    right: 25%;
   }
   .testimonial {
     width: 95%;
