@@ -399,20 +399,21 @@ h4 {
 
 /* SLIDER */
 .slider {
+  position: relative;
   max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
-  position: relative;
 
   /* IN THE END */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .slide {
   position: absolute;
   top: 0;
+
   width: 100%;
-  height: 50rem;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -420,13 +421,6 @@ h4 {
 
   /* THIS creates the animation! */
   transition: transform 1s;
-}
-
-.slide > img {
-  /* Only for images that have different size than slide */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .slider__btn {
@@ -461,6 +455,7 @@ h4 {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  gap: 1.75rem;
 }
 
 .dots__dot {
@@ -470,21 +465,12 @@ h4 {
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  margin-right: 1.75rem;
   cursor: pointer;
   transition: all 0.5s;
-
-  /* Only necessary when overlying images */
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-}
-
-.dots__dot:last-child {
-  margin: 0;
 }
 
 .dots__dot--active {
   background-color: #fff;
-  /* background-color: #888; */
   opacity: 1;
 }
 
