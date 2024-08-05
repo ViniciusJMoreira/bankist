@@ -17,8 +17,9 @@
   .header__title {
     grid-template-columns: 1fr;
     row-gap: 0rem;
-    justify-items: center;
-    align-items: center;
+    justify-items: start;
+    align-items: start;
+    margin-bottom: 5%;
   }
   .header__img {
     display: none;
@@ -185,9 +186,6 @@
   .testimonial__location {
     font-size: 1rem;
   }
-  .dots {
-    /* bottom: 10%; */
-  }
 }
 
 @media (width <= 540px) {
@@ -221,9 +219,6 @@
   }
   .testimonial::before {
     display: none;
-  }
-  .dots {
-    bottom: 5%;
   }
 }
 
