@@ -124,7 +124,7 @@ const lazyImage = function(entries, observer) {
   })
   observer.unobserve(img);
 }
-const imagesObserver = new IntersectionObserver(lazyImage, {root:null, threshold:0.2});
+const imagesObserver = new IntersectionObserver(lazyImage, {root:null, threshold:0});
 allLazyImages.forEach(img => imagesObserver.observe(img));
 
 ///////////////////////////////////////

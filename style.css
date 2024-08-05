@@ -254,7 +254,6 @@ h4 {
   background-image: var(--gradient-primary);
   animation: highlightEntry 2s forwards;
 }
-/* cubic-bezier(0.785, 0.135, 0.15, 0.86) */
 /* FEATURES */
 .features {
   display: grid;
