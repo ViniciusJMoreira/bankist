@@ -75,7 +75,7 @@ observer.observe(section1);
 // Hover links nav
 function handleInOut(e) {
   const link = e.target;
-  if(link.classList.contains("nav__link")) {
+  if(link.classList.contains("nav__link") && window.screen.width > 992) {
     document.querySelectorAll(".nav__link").forEach(el => {
       if(el !== link) el.style.opacity = this;
     });
