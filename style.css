@@ -666,7 +666,7 @@ h4 {
 
 .hidden {
   visibility: hidden;
-  transform: scaleY(0);
+  opacity: 0;
 }
 
 /* COOKIE MESSAGE */
