@@ -41,11 +41,12 @@
     column-gap: 2rem;
   }
   .nav__list {
-    display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0%;
     width: auto;
+    transform: translateX(100%);
+    transform-origin: right;
     padding-left: 12rem;
     height: 100vh;
     flex-direction: column;
@@ -54,7 +55,7 @@
     padding-right: 2.50rem;
     row-gap: 2rem;
     background-color: #f3f3f3;
-    transition: all 1s;
+    transition: all .5s;
   }
   .nav__close {
     display: block;
@@ -208,7 +209,7 @@
     height: 3.2rem;
   }
   .nav__list {
-    padding-left: 5rem;
+    padding-left: 10rem;
   }
   .btn--text {
     font-size: 1.4rem;

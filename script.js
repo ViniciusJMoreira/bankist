@@ -50,10 +50,10 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////
 // Nav menu mobile
 const openMenu = function() {
-  navMenu.style.display = "flex";
+  navMenu.style.transform = 'translateX(0%)';
 }
 const closeMenu = function() {
-  navMenu.style.display = 'none';
+  navMenu.style.transform = 'translateX(100%)';
 }
 navToggle.addEventListener("click", openMenu);
 navClose.addEventListener("click", closeMenu);
@@ -91,6 +91,7 @@ navMenu.addEventListener("click", function(e) {
   if(e.target.classList.contains("nav__link") && !e.target.classList.contains("nav__link--btn")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({behavior: "smooth"});
+    if(window.screen.width < 992) closeMenu();
   }
 });
 // btn learn more event click with animation
