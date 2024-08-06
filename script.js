@@ -85,12 +85,20 @@ function handleInOut(e) {
 }
 nav.addEventListener('mousemove', handleInOut.bind(0.5));
 nav.addEventListener('mouseout', handleInOut.bind(1));
+nav.addEventListener('touchend', handleInOut.bind(1));
 // links nav event click with animation
 navMenu.addEventListener("click", function(e) {
   e.preventDefault();
   if(e.target.classList.contains("nav__link") && !e.target.classList.contains("nav__link--btn")) {
     const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({behavior: "smooth"});
+    const sectionCoords = document.querySelector(id).getBoundingClientRect();
+    
+    window.scrollTo({
+      top: sectionCoords.top + window.scrollY - navHeight,
+      left: sectionCoords.left + window.scrollX,
+      behavior: 'smooth',
+    });
+    // document.querySelector(id).scrollIntoView({behavior: "smooth"});
     if(window.screen.width < 992) closeMenu();
   }
 });
