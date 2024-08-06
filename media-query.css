@@ -131,7 +131,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (width <= 767px) {
   .nav__logo {
     height: 3.7rem;
   }
@@ -185,6 +185,21 @@
   }
   .testimonial__location {
     font-size: 1rem;
+  }
+    .modal {
+    padding-inline: 2rem;
+  }
+  .modal__form {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(7, auto);
+    row-gap: .2rem;
+    margin: 0 2rem;
+  }
+  .modal__form .modal-grid:nth-child(7) {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .modal__form button {
+    margin-top: 2rem;
   }
 }
 
