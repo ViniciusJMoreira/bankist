@@ -230,11 +230,12 @@ const slider = function() {
   btnSliderNext.addEventListener('click', nextSlide);
   btnSliderPrev.addEventListener("click", prevSlide);
   slide.addEventListener("touchstart", dragStart);
-  // slide.addEventListener("mousedown", dragStart);
+  slide.addEventListener("mousedown", dragStart);
   slide.addEventListener("touchmove", dragging);
-  // slide.addEventListener("mousepress", dragging);
+  slide.addEventListener("mousemove", dragging);
   slide.addEventListener("touchend",dragStop);
-  // slide.addEventListener("mouseout",dragStop);
+  slide.addEventListener('mouseup', dragStop);
+  slide.addEventListener('mouseleave', dragStop);
   init();
 }
 slider();
