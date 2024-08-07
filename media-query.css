@@ -196,10 +196,8 @@
     row-gap: .2rem;
     margin-inline: 2rem;
   }
-  .modal__form .modal-grid:nth-child(7) {
-    grid-area: 7 / 1 / 8 / 2;
-  }
   .modal__form button {
+    grid-area: 7 / 1 / 8 / 2;
     margin-top: 2rem;
   }
 }

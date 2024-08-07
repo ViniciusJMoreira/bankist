@@ -172,18 +172,20 @@ tabContainer.addEventListener("click", function(event) {
 ///////////////////////////////////////
 // slider
 const slider = function() {
-  const createDots = function() {
-    allSlide.forEach((_,i) => {
-      const button = document.createElement("button");
-      button.className = "dots__dot";
-      button.dataset.slide = `${i}`;
-      dotsContainer.appendChild(button);
-    })
-  }
+  let isDragStart, isDragging = false;
+  let prevPageX, nextPageX, timerSlide;
+  const slide = document.querySelector('.slider');
   const activateDot = function(curSlide) {
     document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove("dots__dot--active"));
     document.querySelector(`.dots__dot[data-slide="${curSlide}"`).classList.add("dots__dot--active");
   }
+  dotsContainer.addEventListener('click', e => {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      curSlider = Number(slide);
+      goToSlide(curSlider);
+    }
+  });
   const goToSlide = function(curSlide) {
     allSlide.forEach((slide, i) => {
       slide.style.transform = `translateX(${100 * (i-curSlide)}%)`;
@@ -206,19 +208,33 @@ const slider = function() {
     }
     goToSlide(curSlider);
   }
+  const dragStart = function(e) {
+    isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    prevScrollLeft = slide.scrollLeft;
+  }
+  const dragging = function(e) {
+    if (!isDragStart) return;
+    isDragging = true;
+    nextPageX = e.pageX || e.touches[0].pageX;
+  }
+  const dragStop = function() {
+    isDragStart = false;
+    if (!isDragging) return;
+    nextPageX < prevPageX ? nextSlide() : prevSlide();
+    isDragging = false;
+  }
   const init = function() {
-    createDots();
     goToSlide(curSlider);
   }
-  dotsContainer.addEventListener("click", (e) => {
-    if(e.target.classList.contains("dots__dot")) {
-      const {slide} = e.target.dataset;
-      curSlider = Number(slide);
-      goToSlide(curSlider);
-    }
-  });
   btnSliderNext.addEventListener('click', nextSlide);
   btnSliderPrev.addEventListener("click", prevSlide);
+  slide.addEventListener("touchstart", dragStart);
+  // slide.addEventListener("mousedown", dragStart);
+  slide.addEventListener("touchmove", dragging);
+  // slide.addEventListener("mousepress", dragging);
+  slide.addEventListener("touchend",dragStop);
+  // slide.addEventListener("mouseout",dragStop);
   init();
 }
 slider();

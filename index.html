@@ -287,7 +287,11 @@
 
         <button class="slider__btn slider__btn--left">&larr;</button>
         <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
+        <div class="dots">
+          <button class="dots__dot" data-slide="0"></button>
+          <button class="dots__dot" data-slide="1"></button>
+          <button class="dots__dot" data-slide="2"></button>
+        </div>
       </div>
     </section>
 
@@ -345,13 +349,13 @@
         in just <span class="highlight">5 minutes</span>
       </h2>
       <form class="modal__form">
-        <label class="modal-grid">First Name</label>
-        <input class="modal-grid" type="text" />
-        <label class="modal-grid">Last Name</label>
-        <input class="modal-grid" type="text" />
-        <label class="modal-grid">Email Address</label>
-        <input class="modal-grid" type="email" />
-        <button class="modal-grid btn">Next step &rarr;</button>
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
