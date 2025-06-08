@@ -254,9 +254,10 @@ h4 {
   width: 100%;
   z-index: -1;
   opacity: 0.7;
-  transform: translateX(-1000%);
+  transform: translateX(0%) scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
-  animation: highlightEntry 2s forwards;
+  /* transform: translateX(-1000%); */
+  /* animation: highlightEntry 2s forwards; */
 }
 /* FEATURES */
 .features {
